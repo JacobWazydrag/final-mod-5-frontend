@@ -13,7 +13,7 @@ const Dasboard = () => {
   const username = useSelector((state) => state.username);
   const text = username ? (
     <h1>
-      {username} is currently logged in{" "}
+      {username} is currently logged in and this is their dashboard
       <Link to="/" onClick={handleLogout}>
         Student Logout
       </Link>

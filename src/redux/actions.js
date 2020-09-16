@@ -56,6 +56,7 @@ const loginStudentToDB = studentCredentials => dispatch => {
   fetch(LOGIN_URL, config)
     .then(r => r.json())
     .then(data => {
+      console.log(data)
       dispatch(setStudentAction(data.student));
       localStorage.setItem('token', data.token);
     });
@@ -71,6 +72,7 @@ const persistStudent = () => dispatch => {
   fetch(PERSIST_URL, config)
     .then(r => r.json())
     .then(studentInstance => {
+      console.log(studentInstance)
       dispatch(setStudentAction(studentInstance));
     });
 };

@@ -18,8 +18,7 @@ const WelcomePage = () => {
           I am convenient because I require little markup to use effectively.</p>
         </div>
         <div class="card-action">
-        <Link to="/student_signup">Signup</Link>
-      <Link to="/student_login">Login</Link>
+        <Link to="/student_signup">!! Students !!</Link>
         </div>
       </div>
     </div>
