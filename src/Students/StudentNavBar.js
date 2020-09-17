@@ -1,8 +1,17 @@
 import React from 'react'
 import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import studentActions from "../redux/actions";
 import './NavBar.css'
 
-const StudentNavBar = () => {
+const StudentNavBar = (props) => {
+    const dispatch = useDispatch();
+    const handleLogout = (e) => {
+        e.preventDefault()
+        console.log(props)
+      dispatch(studentActions.logoutStudent());
+      console.log()
+    };
     return (
             <nav className="navbar">
     <ul className="navbar-nav">
@@ -109,7 +118,7 @@ const StudentNavBar = () => {
       </li>
 
       <li className="nav-item">
-        <Link to="#" className="nav-link">
+        <Link to="/" className="nav-link">
           <svg
             aria-hidden="true"
             focusable="false"
@@ -132,7 +141,7 @@ const StudentNavBar = () => {
         </Link>
       </li>
       <li className="nav-item">
-        <Link to="#" className="nav-link">
+        <Link onClick={handleLogout} to="/" className="nav-link">
           <svg
             aria-hidden="true"
             focusable="false"
@@ -151,7 +160,7 @@ const StudentNavBar = () => {
               ></path>
             </g>
           </svg>
-          <span className="link-text">Edit Profile</span>
+          <span className="link-text">Log Out</span>
         </Link>
       </li>
 

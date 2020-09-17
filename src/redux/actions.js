@@ -46,6 +46,7 @@ const deleteStudentFromDB = studentId => dispatch => {
 };
 
 const loginStudentToDB = studentCredentials => dispatch => {
+  console.log(studentCredentials)
   const config = {
     method: 'POST',
     headers: {
