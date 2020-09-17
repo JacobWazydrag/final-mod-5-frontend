@@ -3,6 +3,7 @@ import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import studentActions from "../redux/actions";
+import StudentNavBar from "./StudentNavBar";
 
 const Dasboard = () => {
   const dispatch = useDispatch();
@@ -13,17 +14,16 @@ const Dasboard = () => {
   const username = useSelector((state) => state.username);
   const text = username ? (
     <h1>
-      {username} is currently logged in and this is their dashboard
-      <Link to="/" onClick={handleLogout}>
-        Student Logout
-      </Link>
+      
     </h1>
   ) : (
     <h1>
       Nobody is logged in back to welcome page: <Link to="/">Home</Link>
     </h1>
   );
-  return <div>{text}</div>;
+  return <div>
+  <StudentNavBar />
+  {text}</div>;
 };
 
 export default Dasboard;
