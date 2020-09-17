@@ -63,7 +63,6 @@ const SignupPage = (props) => {
   }
 
   return (
-    <body>
       <div className="hero">
         <div className="form-box">
           <div className="button-box">
@@ -136,7 +135,6 @@ const SignupPage = (props) => {
           </form>
         </div>
       </div>
-    </body>
   );
 };
 
