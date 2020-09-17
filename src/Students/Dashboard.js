@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
@@ -9,6 +9,9 @@ const Dasboard = () => {
   const handleLogout = () => {
     dispatch(studentActions.logoutStudent());
   };
+
+  useEffect(() => { dispatch(studentActions.persistStudent()); }, []);
+
 
   const username = useSelector((state) => state.username);
   const text = username ? (
