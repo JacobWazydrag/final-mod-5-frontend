@@ -4,14 +4,12 @@ import { useDispatch } from "react-redux";
 import studentActions from "../redux/actions";
 import './NavBar.css'
 
-const StudentNavBar = (props) => {
-    const dispatch = useDispatch();
-    const handleLogout = (e) => {
-        e.preventDefault()
-        console.log(props)
-      dispatch(studentActions.logoutStudent());
-      console.log()
-    };
+const StudentNavBar = () => {
+  const dispatch = useDispatch();
+  const handleLogout = () => {
+    dispatch(studentActions.logoutStudent());
+  };
+
     return (
             <nav className="navbar">
     <ul className="navbar-nav">
