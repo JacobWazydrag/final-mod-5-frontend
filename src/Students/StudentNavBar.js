@@ -17,7 +17,7 @@ const StudentNavBar = (props) => {
     <ul className="navbar-nav">
       <li className="logo">
         <Link to="#" className="nav-link">
-          <span className="link-text logo-text">ArtSpace</span>
+          <span id="title-text" className="link-text logo-text">ArtSpace</span>
           <svg
             aria-hidden="true"
             focusable="false"

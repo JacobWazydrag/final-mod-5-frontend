@@ -5,9 +5,11 @@
     --text-secondary: #ececec;
     --bg-primary: #23232e;
     --bg-secondary: #141418;
-    --transition-speed: 600ms;
+    --transition-speed: 900ms;
   }
-  
+  #title-text{
+    margin-bottom: -200px;
+  }
   body {
     color: black;
     background-color: white;
@@ -85,11 +87,11 @@
   }
   
   .fa-primary {
-    color: #ff7eee;
+    color: #df8549;
   }
   
   .fa-secondary {
-    color: #df49a6;
+    color: #df8549;
   }
   
   .fa-primary,
