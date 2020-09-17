@@ -67,7 +67,7 @@ const persistStudent = () => dispatch => {
   const config = {
     method: 'GET',
     headers: {
-      Authorization: `bearer ` + localStorage.token
+      Authorization: `bearer ` + localStorage.getItem('token')
     }
   };
   fetch(PERSIST_URL, config)
