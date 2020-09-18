@@ -8,7 +8,10 @@
     --transition-speed: 900ms;
   }
   #title-text{
-    margin-bottom: -200px;
+    margin-bottom: -35px;
+    background: linear-gradient(to right, #ff105f, #ffad06);
+    border-radius: 30px;
+    color: white;
   }
   body {
     color: black;
