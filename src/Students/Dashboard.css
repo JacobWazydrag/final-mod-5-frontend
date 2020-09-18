@@ -303,8 +303,8 @@
   }
   
   .profile__img {
-    width: 3.5rem;
-    height: 3.5rem;
+    width: 6.5rem;
+    height: 6.5rem;
     border-radius: 50%;
   }
   
@@ -343,8 +343,8 @@
     }
   
     .profile__img {
-      width: 3rem;
-      height: 3rem;
+      width: 6rem;
+      height: 6rem;
     }
   }
   

@@ -11,7 +11,8 @@ import './Dashboard.css'
 const Dasboard = () => {
   const dispatch = useDispatch();
   useEffect(() => { dispatch(studentActions.persistStudent()); });
-
+  
+const picUrl = useSelector((state) => state.profile_picture)
   const username = useSelector((state) => state.username);
   const text = username ? (
     <div class="wrapper">
@@ -42,8 +43,8 @@ const Dasboard = () => {
               <span class="profile__name">Jessica</span>
               <img
                 class="profile__img"
-                src=""
-                alt="Profile"
+                src={picUrl}
+                alt={username}
                 loading="lazy"
               />
             </button>
