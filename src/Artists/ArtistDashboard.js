@@ -1,22 +1,22 @@
 import React, { useEffect } from "react";
 
 import { useDispatch } from "react-redux";
-import studentActions from "../redux/actions";
+import artistActions from "../redux/actions";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 
-import StudentNavBar from "./StudentNavBar";
-import './Dashboard.css'
+import ArtistNavBar from "./ArtistNavBar";
+import './ArtistDashboard.css'
 
 const Dasboard = () => {
   const dispatch = useDispatch();
-  useEffect(() => { dispatch(studentActions.persistStudent()); });
+  useEffect(() => { dispatch(artistActions.persistArtist()); });
   
   const username = useSelector((state) => state.username);
   const text = username ? (
     
     <div>
-      <StudentNavBar />
+      <ArtistNavBar />
     This is the Dashboard for {username}
   </div>
   ) : (

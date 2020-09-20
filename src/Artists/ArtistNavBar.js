@@ -1,13 +1,13 @@
 import React from 'react'
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import studentActions from "../redux/actions";
+import artistActions from "../redux/actions";
 import './NavBar.css'
 
-const StudentNavBar = () => {
+const ArtistNavBar = () => {
   const dispatch = useDispatch();
   const handleLogout = () => {
-    dispatch(studentActions.logoutStudent());
+    dispatch(artistActions.logoutArtist());
   };
 
     return (
@@ -167,4 +167,4 @@ const StudentNavBar = () => {
   </nav>
     )
 }
-export default StudentNavBar
+export default ArtistNavBar

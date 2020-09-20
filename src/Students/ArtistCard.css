@@ -1,68 +1,214 @@
-*{
-    margin: 0;
-    padding: 0;
-    text-decoration: none;
-    font-family: "montserrat";
-  }
-  body{
-    background: #333;
-  }
-  .middle{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-  }
-  .card{
-    cursor: pointer;
-    width: 340px;
-    height: 480px;
-  }
-  .front,.back{
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    backface-visibility: hidden;
-    position: absolute;
-    transition: transform .6s linear;
-  }
-  .front img{
-    height: 100%;
-  }
-  .front{
-    transform: perspective(600px) rotateY(0deg);
-  }
-  .back{
-    background: #f1f1f1;
-    transform: perspective(600px) rotateY(180deg);
-  }
-  .back-content{
-    color: #2c3e50;
-    text-align: center;
-    width: 100%;
-  }
-  .sm{
-    margin: 20px 0;
-  }
-  .sm a{
-    display: inline-flex;
-    width: 40px;
-    height: 40px;
-    justify-content: center;
-    align-items: center;
-    color: #2c3e50;
-    font-size: 18px;
-    transition: 0.4s;
-    border-radius: 50%
-  }
-  .sm a:hover{
-    background: #2c3e50;
-    color: white;
-  }
-  .card:hover > .front{
-    transform: perspective(600px) rotateY(-180deg);
-  }
-  .card:hover > .back{
-    transform: perspective(600px) rotateY(0deg);
-  }
+html { 
+  background: white; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+@keyframes animatedBackground2 {
+  0%   { background-position: 0px; }
+100% { background-position: 0px 1222px; } /* set this to the height of the image */
+}
+@-webkit-keyframes animatedBackground2 {
+  0%   { background-position: 0px; }
+100% { background-position: 0px 1222px; } /* set this to the height of the image */
+}
+@-ms-keyframes animatedBackground2 {
+  0%   { background-position: 0px; }
+100% { background-position: 0px 1222px; } /* set this to the height of the image */
+}
+@-moz-keyframes animatedBackground2 {
+  0%   { background-position: 0px; }
+100% { background-position: 0px 1222px; } /* set this to the height of the image */
+}
+
+#animate-area2	{ 
+  margin-left: 100px;
+width: 1735px; 
+height: 1222px; 
+position:absolute;
+background-image: url('./allArtists.jpeg');top:0;left:50%;transform: translateX(-50%);
+background-position: 0 0;
+background-repeat: repeat-y;
+animation: animatedBackground2 30s infinite linear;
+-ms-animation: animatedBackground2 30s infinite linear;
+-moz-animation: animatedBackground2 30s infinite linear;
+-webkit-animation: animatedBackground2 10s infinite linear;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+}
+
+.card {
+  width: 490px;
+  height: 230px;
+  background-color: #fff;
+  background: linear-gradient(#f8f8f8, #fff);
+  box-shadow: 0 8px 16px -8px rgba(0,0,0,0.4);
+  border-radius: 6px;
+  overflow: hidden;
+  position: relative;
+  margin-left: 27rem;
+  margin-top: 10rem;
+  box-shadow: 5px 5px 4px #2a2a2a;
+}
+
+.card h1 {
+  text-align: center;
+}
+
+.card .additional {
+  position: absolute;
+  width: 150px;
+  height: 100%;
+  transition: width 0.4s;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.card.green .additional {
+  background: linear-gradient(#92bCa6, #A2CCB6);
+}
+
+
+.card:hover .additional {
+  width: 100%;
+  border-radius: 0 5px 5px 0;
+}
+
+.card .additional .user-card {
+  width: 150px;
+  height: 100%;
+  position: relative;
+  float: left;
   
+}
+
+.card .additional .user-card::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 10%;
+  right: -2px;
+  height: 80%;
+  border-left: 2px solid rgba(0,0,0,0.025);
+}
+
+.card .additional .user-card .level,
+.card .additional .user-card .points {
+  top: 15%;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 0.75em;
+  font-weight: bold;
+  background: rgba(0,0,0,0.15);
+  padding: 0.125rem 0.75rem;
+  border-radius: 0px;
+  white-space: nowrap;
+  font-family: Arial, Helvetica, sans-serif
+}
+
+.card .additional .user-card .points {
+  top: 85%;
+}
+
+.card .additional .user-card svg {
+  top: 50%;
+}
+
+.card .additional .more-info {
+  width: 300px;
+  float: left;
+  position: absolute;
+  left: 150px;
+  height: 100%;
+}
+
+.card .additional .more-info h1 {
+  color: #fff;
+  margin-bottom: 0;
+}
+
+.card.green .additional .more-info h1 {
+  color: #224C36;
+}
+
+.card .additional .coords {
+  margin: 0 1rem;
+  color: #fff;
+  font-size: 3rem;
+}
+
+.card.green .additional .coords {
+  color: #325C46;
+}
+
+.card .additional .coords span + span {
+  float: right;
+}
+
+.card .additional .stats {
+  font-size: 2rem;
+  display: flex;
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  right: 1rem;
+  top: auto;
+  color: #fff;
+}
+
+.card.green .additional .stats {
+  color: #325C46;
+}
+
+.card .additional .stats > div {
+  flex: 1;
+  text-align: center;
+}
+
+.card .additional .stats i {
+  display: block;
+}
+
+.card .additional .stats div.title {
+  font-size: 0.75rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.card .additional .stats div.value {
+  font-size: 1.5rem;
+  font-weight: bold;
+  line-height: 1.5rem;
+}
+
+.card .additional .stats div.value.infinity {
+  font-size: 2.5rem;
+}
+
+.card .general {
+  width: 300px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  box-sizing: border-box;
+  padding: 1rem;
+  padding-top: 0;
+}
+
+.card .general .more {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  font-size: 0.9em;
+}
+
+
