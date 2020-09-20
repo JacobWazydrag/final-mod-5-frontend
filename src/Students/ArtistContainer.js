@@ -1,6 +1,6 @@
 import React, { useEffect, useState }  from 'react'
 import ArtistCard  from './ArtistCard';
-
+import StudentNavBar from "./StudentNavBar";
 
 
 function ArtistContainer() {
@@ -10,14 +10,16 @@ function ArtistContainer() {
             fetch('http://localhost:3000/artists')
             .then(response => response.json())
             .then(data => {
+                console.log(data)
                 setArtists(data)
             });
-        })
+        }, [])
 
     return (
-        <div className="artist-div">
-            {artists.map(artist => <ArtistCard key={artist.id}>{artist.username}</ArtistCard>)}
-        </div>
+        <ul >
+        <StudentNavBar />
+            {artists.map(artist => <ArtistCard  username={artist.username} favColor={artist.fav_color} bio={artist.bio} email={artist.email} key={artist.id} lastName={artist.last_name} firstName={artist.first_name} img={artist.profile_picture} />)}
+        </ul>
     )
     }
 
