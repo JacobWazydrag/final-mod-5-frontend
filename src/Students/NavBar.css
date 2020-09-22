@@ -40,7 +40,7 @@
   .navbar {
     position: fixed;
     background-color: var(--bg-primary);
-    transition: width 600ms ease;
+    transition: width 900ms ease;
   }
   
   .navbar-nav {
@@ -78,8 +78,10 @@
   }
   
   .link-text {
+    padding-bottom: 5px;
     display: none;
     margin-left: 1rem;
+    padding-left: 8px;
   }
   
   .nav-link svg {
@@ -111,6 +113,8 @@
     font-size: 1.5rem;
     letter-spacing: 0.3ch;
     width: 100%;
+    padding-top: 20px;
+    background-size: 50%;
   }
   
   .logo svg {

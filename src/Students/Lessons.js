@@ -1,38 +1,71 @@
-import * as React from 'react';
+import React, {useEffect, useState} from "react";
+import { useSelector, useDispatch } from "react-redux";
+import studentActions from "../redux/actions";
+import StudentNavBar from './StudentNavBar'
+import './Lessons.css'
 import Paper from '@material-ui/core/Paper';
+import { ViewState } from '@devexpress/dx-react-scheduler';
 import {
   Scheduler,
   MonthView,
+  Toolbar,
+  DateNavigator,
   Appointments,
-  AppointmentTooltip,
+  TodayButton,
 } from '@devexpress/dx-react-scheduler-material-ui';
+const Appointment = ({
+  children, style, ...restProps
+}) => (
+  <Appointments.Appointment
+    {...restProps}
+    style={{
+      ...style,
+      backgroundColor: '#ffa83b',
+      borderRadius: '8px',
+    }}
+  >
+    {children}
+  </Appointments.Appointment>
+);
 
-import appointments from './today-appointments';
-
-export default class Lessons extends React.PureComponent {
-  constructor(props) {
-    super(props);
-    this.state = {
-      data: appointments,
-    };
-  }
-
-  render() {
-    const { data } = this.state;
-
-    return (
-      <Paper>
+function Lessons() {
+  const dispatch = useDispatch();
+  useEffect(() => { dispatch(studentActions.persistStudent()); });
+  const[data, setArtists] = useState([])
+  
+  useEffect(() => {
+    fetch('http://localhost:3000/lessons')
+    .then(response => response.json())
+    .then(lessons => {
+      console.log(lessons)
+      setArtists(lessons)
+    });
+  }, [])
+  const id = useSelector((state) => state.id);
+console.log(id)
+  let data2 = data.filter(data => {
+    return data.student_id === id
+  })
+  return (
+    <Paper>
+              <StudentNavBar />
         <Scheduler
-          data={data}
+          data={data2}
         >
-          <MonthView
-            startDayHour={8}
-            endDayHour={13}
+          <ViewState
+            defaultCurrentDate="2020-09-20"
           />
-          <Appointments />
-          <AppointmentTooltip />
+          <MonthView />
+          <Toolbar />
+          <DateNavigator />
+          <TodayButton 
+          />
+          <Appointments
+            appointmentComponent={Appointment}
+          />
         </Scheduler>
       </Paper>
     );
-  }
 }
+
+export default Lessons

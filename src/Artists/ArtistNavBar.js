@@ -92,7 +92,7 @@ const ArtistNavBar = () => {
       </li>
 
       <li className="nav-item">
-        <Link to="#" className="nav-link">
+        <Link to="/artist_appointments" className="nav-link">
           <svg
             aria-hidden="true"
             focusable="false"

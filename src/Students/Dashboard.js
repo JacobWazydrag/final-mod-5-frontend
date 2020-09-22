@@ -11,6 +11,7 @@ import './Dashboard.css'
 const Dasboard = () => {
   const dispatch = useDispatch();
   useEffect(() => { dispatch(studentActions.persistStudent()); });
+  useEffect(() => { dispatch(studentActions.persistLessons()); });
   
   const username = useSelector((state) => state.username);
   const text = username ? (

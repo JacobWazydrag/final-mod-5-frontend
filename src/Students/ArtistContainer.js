@@ -15,6 +15,7 @@ function ArtistContainer() {
             });
         }, [])
 
+
     return (
         <ul >
         <StudentNavBar />

@@ -43,7 +43,7 @@ const StudentNavBar = () => {
       </li>
 
       <li className="nav-item">
-        <Link to="#" className="nav-link">
+        <Link to="/student_dashboard" className="nav-link">
           <svg
             aria-hidden="true"
             focusable="false"
@@ -92,7 +92,7 @@ const StudentNavBar = () => {
       </li>
 
       <li className="nav-item">
-        <Link to="#" className="nav-link">
+        <Link to="/lessons" className="nav-link">
           <svg
             aria-hidden="true"
             focusable="false"
@@ -116,7 +116,7 @@ const StudentNavBar = () => {
       </li>
 
       <li className="nav-item">
-        <Link to="/lessons" className="nav-link">
+        <Link to="#" className="nav-link">
           <svg
             aria-hidden="true"
             focusable="false"

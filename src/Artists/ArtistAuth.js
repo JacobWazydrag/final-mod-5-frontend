@@ -1,8 +1,5 @@
 import React, { useState } from "react";
-import "./Login.css";
-import FBImage from "../fb.png";
-import GPImage from "../gp.png";
-import TWImage from "../tw.png";
+import "./ArtistLogin.css";
 import { useDispatch } from "react-redux";
 import artistActions from "../redux/actions";
 
@@ -73,11 +70,6 @@ const SignupPage = (props) => {
             <button type="button" className="toggle-btn" onClick={signup}>
               Signup
             </button>
-          </div>
-          <div className="social-icons">
-            <img alt="facebook" src={FBImage} />
-            <img alt="google" src={GPImage} />
-            <img alt="twitter" src={TWImage} />
           </div>
           <form onSubmit={handleSubmit} id="login" className="input-group">
             <input

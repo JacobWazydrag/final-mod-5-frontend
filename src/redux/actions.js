@@ -3,6 +3,7 @@
 
 const BASE_URL = 'http://localhost:3000';
 const ARTISTS_URL = BASE_URL + '/artists';
+const LESSONS_URL = BASE_URL + '/lessons';
 const STUDENTS_URL = BASE_URL + '/students';
 const ARTIST_PERSIST_URL = BASE_URL + '/artist_persist';
 const PERSIST_URL = BASE_URL + '/persist'
@@ -10,6 +11,46 @@ const LOGIN_URL = BASE_URL + '/login';
 const SPECIFIC_ARTIST_URL = id => ARTISTS_URL + '/' + id;
 const SPECIFIC_STUDENT_URL = id => STUDENTS_URL + '/' + id;
 
+// Redux LESSONS Actions
+const setLessonsAction = lessonsObj => ({
+  type: 'SET_LESSON',
+  payload: lessonsObj
+});
+
+const persistLessons = () => dispatch => {
+  const config = {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json'
+    }
+  };
+  
+  fetch(LESSONS_URL, config)
+    .then(r => r.json())
+    .then(lessons => {
+      console.log(lessons)
+      dispatch(setLessonsAction(lessons));
+    });
+};
+
+const getLessonAction = lessonsObj => ({
+  type: 'SET_LESSONS',
+  payload: lessonsObj
+});
+const getLessons = () => dispatch => {
+  const config = {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json'
+    }
+  };
+  
+  fetch(LESSONS_URL, config)
+    .then(r => r.json())
+    .then(lessons => {
+      dispatch(getLessonAction(lessons));
+    });
+};
 // Redux ARTISTS Actions
 const setArtistAction = artistObj => ({
   type: 'SET_ARTIST',
@@ -171,5 +212,7 @@ export default {
   deleteArtistFromDB,
   loginArtistToDB,
   persistArtist,
-  logoutArtist
+  logoutArtist,
+  getLessons,
+  persistLessons
 };
