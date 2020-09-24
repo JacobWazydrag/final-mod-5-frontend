@@ -1,7 +1,6 @@
 import React, {useEffect, useState} from "react";
 import { useSelector, useDispatch } from "react-redux";
 import studentActions from "../redux/actions";
-import StudentNavBar from './StudentNavBar'
 import './Lessons.css'
 import Paper from '@material-ui/core/Paper';
 import { ViewState } from '@devexpress/dx-react-scheduler';
@@ -47,8 +46,8 @@ console.log(id)
     return data.student_id === id
   })
   return (
+    <div id="calendar-background2">
     <Paper>
-              <StudentNavBar />
         <Scheduler
           data={data2}
         >
@@ -65,6 +64,7 @@ console.log(id)
           />
         </Scheduler>
       </Paper>
+      </div>
     );
 }
 

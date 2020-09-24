@@ -43,7 +43,7 @@ const ArtistNavBar = () => {
       </li>
 
       <li className="nav-item">
-        <Link to="#" className="nav-link">
+        <Link to="/artist_dashboard" className="nav-link">
           <svg
             aria-hidden="true"
             focusable="false"
@@ -68,7 +68,7 @@ const ArtistNavBar = () => {
       </li>
 
       <li className="nav-item">
-      <Link className="nav-link" to="/browse_artists">
+      <Link className="nav-link" to="/browse_students">
           <svg
             aria-hidden="true"
             focusable="false"
@@ -87,7 +87,7 @@ const ArtistNavBar = () => {
               ></path>
             </g>
           </svg>
-          <span className="link-text">Browse Artists</span>
+          <span className="link-text">Browse Students</span>
           </Link>
       </li>
 

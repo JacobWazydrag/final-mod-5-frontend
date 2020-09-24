@@ -12,6 +12,21 @@ const SPECIFIC_ARTIST_URL = id => ARTISTS_URL + '/' + id;
 const SPECIFIC_STUDENT_URL = id => STUDENTS_URL + '/' + id;
 
 // Redux LESSONS Actions
+const commitLessonToDB = lessonsObj => dispatch => {
+  const config = {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(lessonsObj)
+  };
+  fetch(LESSONS_URL, config)
+    .then(r => r.json())
+    .then(lessons => {
+      dispatch(setLessonsAction(lessons));
+    });
+};
+
 const setLessonsAction = lessonsObj => ({
   type: 'SET_LESSON',
   payload: lessonsObj
@@ -214,5 +229,6 @@ export default {
   persistArtist,
   logoutArtist,
   getLessons,
-  persistLessons
+  persistLessons,
+  commitLessonToDB
 };

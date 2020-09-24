@@ -15,7 +15,7 @@
     
     #card-img2{
       width: 290px;
-      height: 195px;
+      height: 168px;
     }
 
     #card1{
@@ -24,7 +24,7 @@
       margin-left: 490px;
     }
     #card2{
-      height: 34.1%;
+      height: 32.7%;
       padding-right: 40px;
       margin-left: 1000px;
       margin-top: -338px;
@@ -50,6 +50,7 @@
     #card-title{
       font-size: xx-large;
       padding-left: 100px;
+      margin-left: -20px;
       padding-top: 12px;
     }
     #card-title2{
@@ -63,7 +64,7 @@
       padding-top: 20px;
       padding-bottom: 20px;
       padding-left: 50px;
-      margin-left: 50px;
+      margin-left: 35px;
       width: 80%;
     }
 

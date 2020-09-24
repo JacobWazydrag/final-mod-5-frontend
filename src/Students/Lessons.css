@@ -1,14 +1,23 @@
 .MuiToolbar-root {
-padding-top: 20px;
-
-}
-
-.MuiButtonBase-root, span, .MuiTouchRipple-root{
-    margin-bottom: -73px;
-}
-
-.Root-container-1 {
-margin-left: 300px;
-margin-top: -10px;
-width: 100px;
-}
+    padding-top: 20px;
+    
+    }
+    
+    .MuiButtonBase-root, span, .MuiTouchRipple-root{
+        margin-bottom: -73px;
+    }
+    
+    .Root-container-1 {
+    margin-left: 0px;
+    margin-top: 110px;
+    width: 100px;
+    }
+    
+    #calendar-background2 {
+        height: 100%;
+        width: 100%;
+        background-image: url(./allArtists.jpeg);
+        background-position: center;
+        background-size: cover;
+        position: absolute;  
+    }

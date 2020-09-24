@@ -25,7 +25,7 @@ const WelcomePage = () => {
   <Card.Body>
     <Card.Title id="card-title2" >ARTISTS</Card.Title>
     <Card.Text id="card2-text">
-      Connect with your students and start scheduling lessons
+      Connect with your students and start scheduling
       </Card.Text>
     <button  ><Link id="card2-button" to="/artist_signup"></Link></button>
   </Card.Body>

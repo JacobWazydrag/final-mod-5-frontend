@@ -14,6 +14,7 @@ const Routes = () => {
       <Route path="/student_signup" component={Students.Signup} />
       <Route path="/artist_signup" component={Artists.ArtistAuth} />
       <Route path="/artist_dashboard" component={Artists.ArtistDashboard} />
+      <Route path="/new_booking" component={Artists.NewBooking} />
       <Route path="/artist_appointments" component={Artists.ArtistAppointments} />
       <Route path="/student_login" component={Students.Login} />
       <Route exact path="/" component={WelcomePage.WelcomePage} />
