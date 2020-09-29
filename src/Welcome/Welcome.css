@@ -19,12 +19,13 @@
     }
 
     #card1{
+      margin-top: 0px;
       height: 56%;
       padding-right: 40px;
       margin-left: 490px;
     }
     #card2{
-      height: 32.7%;
+      height: 32.5%;
       padding-right: 40px;
       margin-left: 1000px;
       margin-top: -338px;

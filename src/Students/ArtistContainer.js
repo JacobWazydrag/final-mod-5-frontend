@@ -1,9 +1,15 @@
 import React, { useEffect, useState }  from 'react'
 import ArtistCard  from './ArtistCard';
 import StudentNavBar from "./StudentNavBar";
+import './ArtistContainer.css'
 
 
-function ArtistContainer() {
+function ArtistContainer(props) {
+
+        const handleClick = (e) => {
+            props.history.push("/contact")
+        }
+
         const[artists, setArtists] = useState([])
 
         useEffect(() => {
@@ -17,9 +23,12 @@ function ArtistContainer() {
 
 
     return (
-        <ul >
+        <ul id="ul-ul" >
+    <div class="sign">
+      ArtSpace Artists
+    </div>
         <StudentNavBar />
-            {artists.map(artist => <ArtistCard  username={artist.username} favColor={artist.fav_color} bio={artist.bio} email={artist.email} key={artist.id} lastName={artist.last_name} firstName={artist.first_name} img={artist.profile_picture} />)}
+            {artists.map(artist => <ArtistCard  handleClick={handleClick} speciality={artist.speciality} availability={artist.availability} username={artist.username} favColor={artist.fav_color} bio={artist.bio} email={artist.email} key={artist.id} lastName={artist.last_name} firstName={artist.first_name} img={artist.profile_picture} />)}
         </ul>
     )
     }

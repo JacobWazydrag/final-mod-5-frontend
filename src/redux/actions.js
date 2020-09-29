@@ -77,6 +77,21 @@ const clearArtistAction = () => ({
 });
 
 // Fetch
+const commitChangesToDB = changesObj => dispatch => {
+  console.log(changesObj)
+  const config= {
+    method: 'PATCH',
+    headers: {
+      'content-Type': 'application/json'
+    },
+    body: JSON.stringify(changesObj)
+  };
+  fetch(`http://localhost:3000/artists/${changesObj.artist_id}`, config)
+    .then(r => r.json())
+    .then(changes => {
+      console.log(changes)
+    })
+}
 
 const newArtistToDB = artistObj => dispatch => {
   const config = {
@@ -230,5 +245,6 @@ export default {
   logoutArtist,
   getLessons,
   persistLessons,
-  commitLessonToDB
+  commitLessonToDB, 
+  commitChangesToDB
 };

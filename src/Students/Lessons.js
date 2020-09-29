@@ -47,6 +47,12 @@ console.log(id)
   })
   return (
     <div id="calendar-background2">
+        <div className="svg-wrapper4">
+  <svg height="60" width="320" xmlns="http://www.w3.org/2000/svg">
+    <rect className="shape" height="60" width="320" />
+  </svg>
+   <a href="/student_dashboard" className="text">HOME</a>
+</div>
     <Paper>
         <Scheduler
           data={data2}

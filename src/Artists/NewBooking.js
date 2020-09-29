@@ -99,7 +99,7 @@ console.log(id)
               <select value={student_id} name="student_id" onChange={handleChange} id="#">
                 {studentsObjs.map((student) => (
                   <option key={student.id} >
-                    {student.id}, {student.first_name} {student.last_name}
+                    {student.id}. {student.first_name} {student.last_name}
                   </option>
                 ))}
               </select>
@@ -113,7 +113,7 @@ console.log(id)
                   <option>
                     {id}
                   </option>
-                ))}
+                ))
               </select>
             </div>
 

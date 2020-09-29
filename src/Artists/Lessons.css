@@ -45,7 +45,16 @@ width: 100px;
       margin: 0 auto;
     position: absolute;
     top: 9%;
-    margin-left: 900px;
+    margin-left: 600px;
+    transform: translateY(-50%);
+    width: 320px;
+  }
+.svg-wrapper4 {
+    height: 90px;
+      margin: 0 auto;
+    position: absolute;
+    top: 9%;
+    margin-left: 0px;
     transform: translateY(-50%);
     width: 320px;
   }

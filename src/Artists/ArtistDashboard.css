@@ -9,7 +9,7 @@
     --dune-rgba-2: rgba(36, 34, 33, 0.2);
     --dune-rgba-5: rgba(36, 34, 33, 0.5);
     --alabaster: #f0f1f5;
-    --true-v: #aabde5;
+    --true-v: #f30909;
     --true-v-rgba-5: rgba(145, 116, 216, 0.5);
     --silver: #c7c7c7;
     --blue-violet: #ff0059;
@@ -23,6 +23,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+  }
+
+  #Welcome-message{
+    font-size: x-large;
   }
   
   html,
@@ -862,8 +866,8 @@
   /* Setting button */
   
   .setting {
-    width: 3.2rem;
-    height: 3.2rem;
+    width: 5.2rem;
+    height: 5.2rem;
     padding: 1rem;
     border-radius: 10px;
   }
@@ -875,7 +879,7 @@
   }
   
   .setting--rotate {
-    transform: rotate(90deg);
+    transform: rotate(0deg);
   }
   
   @media (hover: hover) {

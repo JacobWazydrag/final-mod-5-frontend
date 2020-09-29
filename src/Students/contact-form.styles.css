@@ -1,0 +1,71 @@
+.contact-jumbotron {
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  
+  .success-msg {
+    color: #57A773;
+    padding: 10px 15px;
+  }
+  
+  
+  .err-msg {
+    color: #52ee5a;
+    padding: 10px 15px;
+  }
+
+  .sendbtn {
+    padding-bottom: 70px;
+  }
+
+  .send-btn{
+    width: 85%;
+    padding: 10px 30px;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    background: linear-gradient(to right, #ff105f, #ffad06);
+    border: 0;
+    outline: none;
+    border-radius: 30px;
+  }
+
+  .input-field4 {
+    width: 100%;
+    padding: 10px 0;
+    margin: 5px 0;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 1px solid #999;
+    outline: none;
+    background: transparent;
+}
+.input-group4{
+  margin-left: 600px;
+  margin-right: 600px;
+  margin-top: 100px;
+}
+
+.Contact-me {
+  margin-left: 780px;
+}
+
+#contact{
+  padding-top: 100px;
+}
+
+input[type=text]:not(.browser-default):focus:not([readonly]),
+input[type=email]:not(.browser-default):focus:not([readonly]),
+input[type=password]:not(.browser-default):focus:not([readonly]),
+textarea.materialize-textarea:focus:not([readonly]){
+  border-color: #c54b09;
+  box-shadow: none;
+}
+
+input[type=text]:not(.browser-default):focus:not([readonly]) + label,
+textarea.materialize-textarea:focus:not([readonly]) + label,
+input[type=email]:not(.browser-default):focus:not([readonly]) + label,
+input[type=password]:not(.browser-default):focus:not([readonly]) + label{
+  color: #09c567 !important;
+}

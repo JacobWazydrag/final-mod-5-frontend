@@ -1,10 +1,4 @@
-html { 
-  background: white; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
+
 
 @keyframes animatedBackground2 {
   0%   { background-position: 0px; }
@@ -53,9 +47,15 @@ animation: animatedBackground2 30s infinite linear;
   border-radius: 6px;
   overflow: hidden;
   position: relative;
-  margin-left: 27rem;
-  margin-top: 10rem;
+  margin-left: 41rem;
+  margin-top: 20rem;
   box-shadow: 5px 5px 4px #2a2a2a;
+  top: 20rem;
+}
+#add-info{
+  color:white;
+  margin-bottom: -165px;
+  font-size: 1rem;
 }
 
 .card h1 {
@@ -101,10 +101,9 @@ animation: animatedBackground2 30s infinite linear;
 
 .card .additional .user-card .level,
 .card .additional .user-card .points {
-  top: 15%;
+  top: 8%;
   color: #fff;
-  text-transform: uppercase;
-  font-size: 0.75em;
+  font-size: 0.65em;
   font-weight: bold;
   background: rgba(0,0,0,0.15);
   padding: 0.125rem 0.75rem;
@@ -126,12 +125,14 @@ animation: animatedBackground2 30s infinite linear;
   float: left;
   position: absolute;
   left: 150px;
-  height: 100%;
+  height: 30%;
 }
 
 .card .additional .more-info h1 {
   color: #fff;
   margin-bottom: 0;
+  font-size: larger;
+  margin-top: 6px;
 }
 
 .card.green .additional .more-info h1 {
@@ -193,14 +194,14 @@ animation: animatedBackground2 30s infinite linear;
 }
 
 .card .general {
-  width: 300px;
+  width: 350px;
   height: 100%;
   position: absolute;
   top: 0;
   right: 0;
   z-index: 1;
   box-sizing: border-box;
-  padding: 1rem;
+  padding: 2rem;
   padding-top: 0;
 }
 

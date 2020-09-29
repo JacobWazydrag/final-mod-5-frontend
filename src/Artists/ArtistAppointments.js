@@ -1,5 +1,4 @@
 import React, {useEffect, useState} from "react";
-import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import artistActions from "../redux/actions";
 import './Lessons.css'
@@ -49,23 +48,17 @@ console.log(id)
   })
   return (
     <div id="calendar-background" >
-    <div class="svg-wrapper">
+    <div className="svg-wrapper">
   <svg height="60" width="320" xmlns="http://www.w3.org/2000/svg">
-    <rect class="shape" height="60" width="320" />
+    <rect className="shape" height="60" width="320" />
   </svg>
-   <a href="/new_booking" class="text">&nbsp;NEW</a>
+   <a href="/new_booking" className="text">&nbsp;NEW</a>
 </div>
-    <div class="svg-wrapper2">
+    <div className="svg-wrapper3">
   <svg height="60" width="320" xmlns="http://www.w3.org/2000/svg">
-    <rect class="shape" height="60" width="320" />
+    <rect className="shape" height="60" width="320" />
   </svg>
-   <a href="/edit_booking" class="text">&nbsp;EDIT</a>
-</div>
-    <div class="svg-wrapper3">
-  <svg height="60" width="320" xmlns="http://www.w3.org/2000/svg">
-    <rect class="shape" height="60" width="320" />
-  </svg>
-   <a href="/artist_dashboard" class="text">HOME</a>
+   <a href="/artist_dashboard" className="text">HOME</a>
 </div>
     <Paper>
         <Scheduler
