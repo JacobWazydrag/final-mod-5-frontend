@@ -52,8 +52,7 @@ console.log(id)
       <main className="main">
         <header className="header">
           <div className="header__wrapper">
-            <h1>Hey there {username}</h1>
-
+          <p class="cloud-text cloud-title">Welcome Back!</p>
           </div>
         </header>
         

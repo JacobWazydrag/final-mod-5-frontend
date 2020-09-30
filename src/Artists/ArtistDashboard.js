@@ -67,15 +67,12 @@ console.log(id)
       <main className="main">
         <header className="header">
           <div className="header__wrapper">
-            <h1 id="Welcome-message" >Welcome back {username}! <br></br>See your lessons below <br></br>
-            See your calendar, edit your profile, <br></br>or make new appointments from the nav bar
-            </h1>
-
+            <p class="cloud-text cloud-title">Welcome Back!</p>
           </div>
         </header>
         <section className="section">
           <header className="section__header">
-            <h2 className="section__title">All Lessons</h2>
+            <h2 className="section__title">Lessons</h2>
             <div className="section__control">
             </div>
           </header>
@@ -89,7 +86,7 @@ console.log(id)
                       className="icon icon--viking"
                       aria-label="Icon of the 'Showcase Design' project"
                     >
-                      <svg
+                      <svg 
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 512 512"
                         role="img"
@@ -140,17 +137,8 @@ console.log(id)
                   <button
                       id={data.id}
                       onClick={deleteLesson}
-                      className="setting setting--rotate focus--box-shadow"
-                      type="button">
-                      <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 640 512"
-                  role="img"
-                >
-                  <path
-                    d="M589.6 240l45.6-45.6c6.3-6.3 6.3-16.5 0-22.8l-22.8-22.8c-6.3-6.3-16.5-6.3-22.8 0L544 194.4l-45.6-45.6c-6.3-6.3-16.5-6.3-22.8 0l-22.8 22.8c-6.3 6.3-6.3 16.5 0 22.8l45.6 45.6-45.6 45.6c-6.3 6.3-6.3 16.5 0 22.8l22.8 22.8c6.3 6.3 16.5 6.3 22.8 0l45.6-45.6 45.6 45.6c6.3 6.3 16.5 6.3 22.8 0l22.8-22.8c6.3-6.3 6.3-16.5 0-22.8L589.6 240zM224 256c70.7 0 128-57.3 128-128S294.7 0 224 0 96 57.3 96 128s57.3 128 128 128zm89.6 32h-16.7c-22.2 10.2-46.9 16-72.9 16s-50.6-5.8-72.9-16h-16.7C60.2 288 0 348.2 0 422.4V464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48v-41.6c0-74.2-60.2-134.4-134.4-134.4z"
-                  />
-                </svg>
+                      className="big-button"
+                      type="button">X
                     </button>
                   </div>
                 </div>

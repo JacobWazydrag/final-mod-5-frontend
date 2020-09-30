@@ -22,13 +22,7 @@ const EditArtist = (props) => {
   const artist_last_name = useSelector((state) => state.last_name);
 
   const [profileForm, setProfileForm] = useState({
-    username: "",
-    email: "",
-    first_name: "",
-    last_name: "",
     fav_color: "",
-    facebook_url: "",
-    instagram_url: "",
     bio: "",
   });
 
@@ -137,7 +131,7 @@ const EditArtist = (props) => {
             <div className="form-field">
               <p>Confirm Your ID</p>
               <select value={artist_id} name="artist_id" onChange={handleChange} id="#">
-                  <option>
+                  <option id="optionapear" >
                     {artist_id}
                   </option>
                   <option>

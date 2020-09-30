@@ -83,7 +83,7 @@ const SignupPage = (props) => {
             <input
               value={password}
               onChange={handleChange}
-              type="text"
+              type="password"
               name="password"
               className="input-field"
               placeholder="password"
@@ -114,7 +114,7 @@ const SignupPage = (props) => {
               placeholder="username"
             />
             <input
-              type="text"
+              type="password"
               name="password"
               value={signuppassword}
               onChange={handleSignUpChange}
