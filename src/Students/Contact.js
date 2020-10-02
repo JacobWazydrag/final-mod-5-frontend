@@ -75,7 +75,7 @@ class Contact extends React.Component{
         <h1 className="Contact-me">CONTACT ME</h1>
         <div className="social-icons" >
             <a rel="noopener noreferrer" href="https://www.facebook.com/nicky_gouna_art-105095717867984" target="_blank"><img  src={FB} alt="fb" /></a>
-            <a rel="noopener noreferrer" href="https://www.instagram.com/nicky_gouna_art/" target="_blank"><img  src={IG} alt="fb" /></a>
+            <a rel="noopener noreferrer" href="https://www.instagram.com/nicky.artist/" target="_blank"><img  src={IG} alt="fb" /></a>
         </div>
         <div>
           <Form id="ContactForm" onSubmit={this.handleSubmit.bind(this)} className="input-group4">
